@@ -1,0 +1,150 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer stays at the bottom */
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    flex-grow: 1; /* Allow main to grow to fill available space */
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  padding: 8px 12px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+aside.cart {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+aside.cart h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+aside.cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside.cart ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+aside.cart ul li:last-child {
+    border-bottom: none;
+}
+
+aside.cart .remove-item {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+aside.cart p {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#checkout-button {
+    background-color: #008CBA; /* Blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    body {
+        flex-direction: row; /* Arrange main and aside side-by-side */
+    }
+
+    main {
+        flex-grow: 1;
+        width: calc(100% - 300px); /* Adjust width for aside */
+    }
+}
+/* Smaller screen adjustments */
+@media (max-width: 767px) {
+    .product-list {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    aside.cart {
+        width: 100%;
+        border-top: 1px solid #ddd;
+    }
+    body{
+        flex-direction: column;
+    }
+    main {
+        width: 100%;
+    }
+}

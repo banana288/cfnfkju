@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров - Страница 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Каталог товаров</h1>
+    </header>
+
+    <main>
+        <section class="product-list">
+          <div class="product">
+                <img src="pic/8" alt="Товар 7">
+                <h3>RURRI Игрушка для собак Мяч, 6 см</h3>
+                <p class="price">100 руб.</p>
+                <button class="add-to-cart" data-id="7" data-name="RURRI Игрушка для собак Мяч, 6 см" data-price="100">Добавить в корзину</button>
+            </div>
+            <!-- Остальные 5 товаров на этой странице -->
+            <div class="product">
+                <img src="pic/9" alt="Товар 8">
+                <h3>RURRI Игрушка для собак Осьминог, 39 см</h3>
+                <p class="price">150 руб.</p>
+                <button class="add-to-cart" data-id="8" data-name="RURRI Игрушка для собак Осьминог, 39 см" data-price="150">Добавить в корзину</button>
+            </div>
+              <div class="product">
+                <img src="pic/777" alt="Товар 9">
+                <h3>GiGwi Игрушка с электронным чипом для кошек Мышка, 9 см</h3>
+                <p class="price">200 руб.</p>
+                <button class="add-to-cart" data-id="9" data-name="GiGwi Игрушка с электронным чипом для кошек Мышка, 9 см" data-price="200">Добавить в корзину</button>
+            </div>
+              <div class="product">
+                <img src="pic/666" alt="Товар 10">
+                <h3>RURRI Игрушка для кошек Акула с погремушкой, 10 см</h3>
+                <p class="price">250 руб.</p>
+                <button class="add-to-cart" data-id="10" data-name="RURRI Игрушка для кошек Акула с погремушкой, 10 см" data-price="250">Добавить в корзину</button>
+            </div>
+        </section>
+
+        <div class="pagination">
+            <a href="index.html">&laquo; Предыдущая</a>
+            <a href="index.html">Лакомства</a>
+            <a href="page2.html"  class="active">Игрушки</a>
+            <a href="page3.html">Аксессуары</a>
+            <a href="page3.html">Следующая &raquo;</a>
+        </div>
+    </main>
+
+    <aside class="cart">
+        <h2>Корзина</h2>
+        <ul id="cart-items"></ul>
+        <p>Итого: <span id="cart-total">0</span> руб.</p>
+        <button id="checkout-button">Оформить заказ</button>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
